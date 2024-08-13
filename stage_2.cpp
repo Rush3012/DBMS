@@ -54,7 +54,7 @@ void updateAttrname(const char* relname, const char* oldattrname, const char* ne
    for(int i=0;i<attrCatHeader.numEntries;i++){
       Attribute attrCatRecord[ATTRCAT_NO_ATTRS];
       attrCatBuffer.getRecord(attrCatRecord, i);
-      if(strcmp(attrCatRecord[ATTRCAT_REL_NAME_INDEX].sVal,relname)==0 &&         strcmp(attrCatRecord[ATTRCAT_ATTR_NAME_INDEX].sVal,oldattrname)==0){
+      if(strcmp(attrCatRecord[ATTRCAT_REL_NAME_INDEX].sVal,relname)==0 && strcmp(attrCatRecord[ATTRCAT_ATTR_NAME_INDEX].sVal,oldattrname)==0){
       strcpy(attrCatRecord[ATTRCAT_ATTR_NAME_INDEX].sVal, newattrname);
       attrCatBuffer.setRecord(attrCatRecord, i);
       break;
